@@ -9,7 +9,7 @@ import java.util.HashMap;
  * ***************************************************************************************
  * REQUIRED HELP CITATION
  *
- * TODO: cite your help here or say "only used CSSE220 materials"
+ * only used CSSE220 materials
  * ***************************************************************************************
  *
  * <dl>
@@ -46,7 +46,8 @@ public class HW3 {
      * return value = {CDG=118, FOC=14, IND=230}
      */
     public static HashMap<String, Integer> buildAirportMap(String[] airportCodes, Integer[] airportElevations) {
-        throw new UnsupportedOperationException("TODO: Remove this line and implement this method.");
+//        throw new UnsupportedOperationException("done: Remove this line and implement this method.");
+
     } // buildAirportMap
 
     /**

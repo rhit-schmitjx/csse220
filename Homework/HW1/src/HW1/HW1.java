@@ -1,10 +1,12 @@
 package HW1;
 
+import java.security.KeyStore;
+
 /**
  ****************************************************************************************
  *         REQUIRED HELP CITATION
  *
- *         TODO: cite your help here or say "only used CSSE220 materials"
+ *         only used CSSE220 materials
  ****************************************************************************************
  *
  * <dl>
@@ -60,8 +62,15 @@ public class HW1 {
 	 * @return
 	 */
 	public static boolean secondDigit5(int input) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
-	}
+//        throw new UnsupportedOperationException();
+        if (input%100<10){
+            return false;
+        }
+        else{
+            return (input%50<10);
+        }
+    }
+
 
 
 	/**
@@ -83,7 +92,33 @@ public class HW1 {
 	 * Requires: for loops
 	 */
 	public static double pow(int num, int power) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
+//		throw new UnsupportedOperationException("done: delete this statement and implement this operation.");
+        double n =num;
+        double n1 = num;
+        if (power>0) {
+            for (int i = 0; i < power-1; i++) {
+                n *= num;
+            }
+            return n;
+        }
+        else if (power==0){
+            n=1;
+            return n;
+        }
+        else{
+            if (power%2==0) {
+                for (int i = power; i < -1; i++) {
+                    n *= num;
+                }
+                return 1 / n;
+            }
+            else{
+                for (int i = power; i < -1; i++) {
+                    n *= num;
+                }
+                return -1 / n;
+            }
+        }
 	}
 
 	/**
@@ -101,7 +136,19 @@ public class HW1 {
 	 * Requires: arrays, for loops
 	 */
 	public static int[] powersOfTwo(int maxExponent) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
+//		throw new UnsupportedOperationException("done: delete this statement and implement this operation.");
+        if (maxExponent<0){
+            int[] a = {};
+            return a;
+        }
+        else{
+            int[] a = new int[maxExponent + 1];
+            a[0] = 1;
+            for (int i = 1; i <= maxExponent; i++) {
+                a[i] = a[i - 1] * 2;
+            }
+            return a;
+        }
 	}
 
 	/**
@@ -117,7 +164,17 @@ public class HW1 {
 	 * Requires: arrays, for loops
 	 */
 	public static int[] maxArray(int[] one, int[] two) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
+//		throw new UnsupportedOperationException("done: delete this statement and implement this operation.");
+        int[] a = new int[one.length];
+        for (int i=0; i<one.length; i++){
+            if (one[i]>=two[i]){
+                a[i]=one[i];
+            }
+            else{
+                a[i]=two[i];
+            }
+        }
+        return a;
 	}
 
 	/**
@@ -135,7 +192,17 @@ public class HW1 {
 	 * @return a score
 	 */
 	public static int footballScore(char[] input) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
+//		throw new UnsupportedOperationException("done: delete this statement and implement this operation.");
+        int sum=0;
+        for (int i=0; i<input.length; i++){
+            if (input[i]=='T'){
+                sum+=7;
+            }
+            else{
+                sum+=3;
+            }
+        }
+        return sum;
 	}
 
 	/**
@@ -152,6 +219,7 @@ public class HW1 {
 	 * cite your source in the help citation at the top of the file.
 	 */
 	public static double distanceFromOrigin(double x, double y) {
-		throw new UnsupportedOperationException("TODO: delete this statement and implement this operation.");
+//		throw new UnsupportedOperationException("done: delete this statement and implement this operation.");
+        return Math.sqrt(x*x+y*y);
 	}
 }

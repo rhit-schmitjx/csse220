@@ -88,8 +88,8 @@ public class StringProbs {
 	 * "" returns false
 	 */	
 	public static boolean firstMatchesLast(String input) {
-		// TODO: YOU solve this one
-		return false;
+		// done: YOU solve this one
+        return !input.isEmpty() && input.charAt(0) == input.charAt(input.length()-1);
 	}
 
 	/**
@@ -124,8 +124,9 @@ public class StringProbs {
 	 * "foofoofoo" returns false
 	 */	
 	public static boolean isDoubled(String input) {
-		// TODO: YOU solve this one
-		return false;
+		// done: YOU solve this one
+        return input.substring(0,input.length()/2).equals(input.substring(input.length()/2));
+		//return false;
 	}
 	
 	

@@ -7,3 +7,5 @@ bin/
 # Non-essential project files
 *cs.xml
 *orkspace.xml
+*opilot.data.migration.agent.xml
+*opilot.data.migration.edit.xml
